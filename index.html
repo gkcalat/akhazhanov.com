@@ -34,9 +34,9 @@ hr {
 
 <div class="bgimg">
   <div class="middle">
-    <h1>COMING SOON</h1>
+    <h1>Loading the future...</h1>
     <hr>
-    <p id="demo" style="font-size:30px"></p>
+    <p id="cntdwntimer" style="font-size:30px"></p>
   </div>
 </div>
 
@@ -52,12 +52,12 @@ var countdownfunction = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  document.getElementById("cntdwntimer").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
 
   if (distance < 0) {
     clearInterval(countdownfunction);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("cntdwntimer").innerHTML = "EXPIRED";
   }
 }, 1000);
 </script>
